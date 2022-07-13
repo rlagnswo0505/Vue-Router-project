@@ -1,21 +1,23 @@
 <template>
-  <td>{{ item.product_name }}</td>
-  <td>{{ getPrice }}</td>
-  <td>{{ item.category }}</td>
-  <td>{{ getDeliveryPrice }}</td>
+  <tr>
+    <td>{{ product.product_name }}</td>
+    <td>{{ getPrice }}</td>
+    <td>{{ product.category }}</td>
+    <td>{{ getDeliveryPrice }}</td>
+  </tr>
 </template>
 
 <script>
 export default {
   props: {
-    item: Object,
+    product: Object,
   },
   computed: {
     getPrice() {
-      return this.numberComma(this.item.price);
+      return this.numberComma(this.product.price);
     },
     getDeliveryPrice() {
-      return this.numberComma(this.item.delivery_price);
+      return this.numberComma(this.product.delivery_price);
     },
   },
   methods: {

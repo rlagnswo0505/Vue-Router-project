@@ -17,7 +17,6 @@
           <td>{{ numberComma(item.price) }}</td>
           <td>{{ item.category }}</td>
           <td>{{ item.delivery_price }}</td>
-          <td>{{ item.total_price }}</td>
         </tr>
       </tbody>
     </table>
@@ -31,10 +30,9 @@
           <th>배송료</th>
         </tr>
       </thead>
+      <input type="text" name="kim" id="" />
       <tbody>
-        <tr :key="idx" v-for="(item, idx) in productList">
-          <ProductItem :item="item" />
-        </tr>
+        <ProductItem :product="item" :key="idx" v-for="(item, idx) in productList" />
       </tbody>
     </table>
   </div>

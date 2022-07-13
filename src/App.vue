@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> | <router-link to="/about">About</router-link> | <router-link to="/intro">Intro</router-link> |
-    <router-link to="/databindinglist">Data Binding</router-link>
+    <router-link to="/">Home</router-link> | <router-link to="/about">About</router-link> | <router-link to="/intro">Intro</router-link> | <router-link to="/databindinglist">Data Binding</router-link> | <router-link to="/randering">Randering</router-link> |
+    <router-link to="/eventclick">EventClick</router-link>
   </nav>
   <router-view />
 </template>
