@@ -43,9 +43,8 @@
   <div>
     <h3>p.107</h3>
     <div class="container" :class="{ active: isActive, 'text-red': hasError }">Class Binding</div>
-    <div class="container" :class="{ activeClass, errorClass }">Class Binding</div>
+    <div class="container" :class="[activeClass, errorClass]">Class Binding</div>
     <div class="container" :class="clsArr">Class Binding</div>
-    <button v-on:click="toggleBtn">토글</button>
   </div>
   <div>
     <h3>p.110</h3>
@@ -86,10 +85,6 @@ export default {
     printGender() {
       return ~~this.gender === 0 ? '여성' : '남성';
     },
-  },
-  toggleBtn() {
-    this.isActive = !this.isActive;
-    this.hasError = !this.hasError;
   },
 };
 </script>
